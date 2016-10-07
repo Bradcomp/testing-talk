@@ -7,9 +7,14 @@ const phone = require('../src/phone');
 
 describe('Phone number validation', () => {
 
-  it('should require the phone number to be a string');
+  it('should require the phone number to be a string', () => {
+    const failure = Failure(['invalid phone number']);
 
-  it('should require the phone to be 9 digits');
+    expect(phone(undefined)).to.eql(failure);
+    expect(phone(123456789)).to.eql(failure);
+  });
+
+  it('should require the phone number to be 9 digits');
 
   it('should strip non-digit characters from the phone string');
 });
