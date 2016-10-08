@@ -6,8 +6,8 @@ const isString = (s) => (typeof s === 'string');
 const phone = (phoneNumber) => {
   if (!isString(phoneNumber))
     return Failure(['invalid phone number']);
-    
-  if (phoneNumber.replace(/\D+/, '').length !== 9)
+
+  if (phoneNumber.replace(/\D+/, '').length !== 10)
     return Failure(['invalid phone number']);
 
   return Success(phoneNumber.replace(/\D+/, ''));

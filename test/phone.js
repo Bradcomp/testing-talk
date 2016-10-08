@@ -14,7 +14,7 @@ describe('Phone number validation', () => {
     expect(phone(123456789)).to.eql(failure);
   });
 
-  it('should require the phone number to be 9 digits');
+  it('should require the phone number to be 10 digits');
 
   it('should strip non-digit characters from the phone string');
 });
