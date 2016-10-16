@@ -20,5 +20,7 @@ describe('Phone number validation', () => {
     expect(phone('9165554444')).to.eql(Success('9165554444'));
   });
 
-  it('should strip non-digit characters from the phone string');
+  it('should strip non-digit characters from the phone string', () => {
+    expect(phone('(916) 555-4444')).to.eql(Success('9165554444'));
+  });
 });
